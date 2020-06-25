@@ -1,0 +1,13 @@
+h1 ニュース登録
+
+.nav.justify-content-end
+ = link_to '一覧', infos_path, class: 'nav-link'
+
+=form_with model: @info, local: true do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control', id: 'info_name'
+  .form-group
+    = f.label :discription
+    = f.text_area :description, rows: 5, class: 'form-control', id: 'info_description'
+  = f.submit nil, class: 'btn btn-primary'

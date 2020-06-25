@@ -1,0 +1,44 @@
+h1 医療ニュース一覧
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading"><h2 class="panel-title">最新コロナ感染者情報</h2></div>
+  <div class="panel-body">
+    <p>全国の最新感染者情報を公開</p>
+  </div>
+  <div class="panel-footer text-right">更新日 2020/06/15</div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading"><h2 class="panel-title">アベノマスク90%普及済み</h2></div>
+  <div class="panel-body">
+    <p>安倍首相は本日10:00の記者会見でマスク配布状況を報告した。</p>
+  </div>
+  <div class="panel-footer text-right">更新日 2016/0６/12</div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading"><h2 class="panel-title">XXXXXXXXXXXXXXXXXX</h2></div>
+  <div class="panel-body">
+    <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+  </div>
+  <div class="panel-footer text-right">更新日 2016/XX/XX</div>
+</div>
+
+
+table.table.table-hober
+  thead.thead-default
+    tr
+      th= Info.human_attribute_name(:name)
+      th= Info.human_attribute_name(:description)
+  tbody
+    - @infos.each do |info|
+      tr
+        td= info.name
+        td= info.description
+
+
+
+
+= link_to '新規ニュース登録', new_info_path, class: 'btn btn-primary'
