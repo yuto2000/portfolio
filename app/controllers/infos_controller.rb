@@ -1,6 +1,6 @@
 class InfosController < ApplicationController
   def index
-    @infos = Info.all 
+    @infos = Info.all
   end
 
   def show

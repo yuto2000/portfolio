@@ -1,0 +1,9 @@
+<h1>新規ニュースの登録</h1>
+
+
+<%= form_with model: @info, local: true do |f|%>
+<div class = "form-groap">
+<label for = "info_name">名称</label>
+<input class = "form_control" id = "info_name" type = "test" name = "info[name]"/>
+<input type = "submit" name = "commit" value="登録する" class = "btn btn-primary" data-disable-with="登録する">
+<% end %>
