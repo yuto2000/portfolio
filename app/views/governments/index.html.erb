@@ -1,0 +1,96 @@
+<ul class="nav nav-tabs">
+<li class="nav-item">
+  <a href="#tab1" class="nav-link active" data-toggle="tab">国会</a>
+</li>
+<li class="nav-item">
+  <a href="#tab2" class="nav-link" data-toggle="tab">選挙</a>
+</li>
+<li class="nav-item">
+  <a href="#tab3" class="nav-link" data-toggle="tab">制作</a>
+</li>
+<li class="nav-item">
+  <a href="#tab4" class="nav-link" data-toggle="tab">政府発表</a>
+</li>
+</ul>
+
+<div class="tab-content">
+<div id="tab1" class="tab-pane active">
+  <img src="https://tk.ismcdn.jp/mwimgs/2/0/1140/img_204b0c955104c25e8cccd11128646cda304053.jpg" class="rounded mx-auto d-block" alt="">
+
+<div class="card">
+    <% @governments.each do |government| %>
+    <div class="card-body">
+      <h5 class="card-title"><%=government.name%></h5>
+      <p class="card-text"><%=government.description%></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+    <svg class="bd-placeholder-img card-img-bottom" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
+    <% end %>
+    <%=link_to '新規ニュース登録', new_government_path, class: 'btn btn-primary' %>
+  </div>
+  　
+</div>
+<div id="tab2" class="tab-pane">
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <tbody>
+        <tr>
+          <td class="day">北海道</td>
+          <td><p>12名</p></td>
+        </tr>
+        <tr>
+          <td class="day">2</td>
+          <td><p>XXX</p></td>
+        </tr>
+        <tr>
+          <td class="day">3</td>
+          <td><p></p></td>
+        </tr>
+        <tr>
+          <td class="day">4</td>
+          <td>XXXXX</td>
+        </tr>
+        <tr>
+          <td class="day">5</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="day">6</td>
+          <td><p></p></td>
+        </tr>
+        <tr>
+          <td class="day">7</td>
+          <td><p></p></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div id="tab3" class="tab-pane">
+<h2 class="border_brown">小児</h2>
+  <img src="https://s3-ap-northeast-1.amazonaws.com/static.amanaimages.com/imgroom/rf_preview640/11038/11038002108.jpg" class="rounded mx-auto d-block" alt="">
+</div>
+<div id="tab4" class="tab-pane">
+  <h2 class="border_brown">政府発表</h2>
+  <img src="https://free-materials.com/adm/wp-content/uploads/2016/10/adtDSC_2478-750x499.jpg" class="rounded mx-auto d-block" alt="">
+</div>
+</div>
+
+
+
+
+<%# table.table.table-hober
+  thead.thead-default
+    tr
+      th= Info.human_attribute_name(:name)
+      th= Info.human_attribute_name(:description)
+  tbody
+    - @infos.each do |info|
+      tr
+        td= info.name
+        td= info.description
+
+
+
+
+= link_to '新規ニュース登録', new_info_path, class: 'btn btn-primary' %>

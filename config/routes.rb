@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-root to: "home#index"
-resources :infos
-resources :governments
+ devise_for :users
+ resources :infos
+ resources :governments
+ root to: "home#index"
 end
